@@ -7,8 +7,6 @@
 User* UserInit() {
     User* u = (User*)malloc(sizeof(User));
     memset(u, 0, sizeof(User));
-    u->id = 0;
-    u->username = "default";
 
     u->getId = getId;
     u->getUserName = getUserName;

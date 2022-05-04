@@ -25,6 +25,9 @@ typedef struct user {
 
     char* (*getUserName)(struct user*);
 
+    void (*print)(void *);
+
+
 } User;
 
 User* UserInit();

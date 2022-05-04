@@ -9,6 +9,7 @@
 Student * StudentInit(){
     Student* s = (Student*)malloc(sizeof(Student));
     memset(s, 0, sizeof(Student));
+
     s->user=UserInit();
     s->setGrade=setGrade;
     s->getGrade=getGrade;
@@ -37,4 +38,13 @@ int getGrade(Student* s) {
         return -1;
     }
     return s->grade;
+}
+
+void s_print(void *p){
+    if(p==NULL){
+        printf("Error: print() - student is NULL\n");
+    }
+    Student * s = (Student *)p;
+    printf("Student print\n");
+    printf("student name: %s,student grade:%d\n",s->user->username,s->grade);
 }

@@ -15,7 +15,7 @@ typedef struct student {
 
 
     struct student* (*StudentInit)();
-    void (*studentDe)(struct student*);
+    void (*StudentDe)(struct student*);
 
 
 
@@ -24,13 +24,13 @@ typedef struct student {
 } Student;
 
 Student * StudentInit();
-void StudentDe(struct student*);
+void StudentDe(Student *);
 
 
 void setGrade(Student*, int);
 int getGrade(Student*);
 
-
+void s_print(void *);
 
 
 
